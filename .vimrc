@@ -2,10 +2,9 @@
 
 execute pathogen#infect()
 set number
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set softtabstop=4 shiftwidth=4 expandtab
 syntax enable
+set cc=80,120
 colorscheme monokai 
 set hlsearch
 set title
@@ -23,5 +22,12 @@ nmap <C-h> :%!python -m json.tool<CR>
 nmap <C-f> :%s/
 nmap <C-t> :NERDTreeToggle<CR>
 nmap <S-t> :NERDTreeFocus<CR>
+nmap <C-i> :IndentGuidesToggle<CR>
 nmap <f3>  :Ack
 nmap <F4>  :set hlsearch!<CR>
+
+"Colors
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=darkgrey
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=grey
+
