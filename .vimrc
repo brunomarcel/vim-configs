@@ -1,7 +1,6 @@
 "Customização
 
 execute pathogen#infect()
-"teste
 set number
 set softtabstop=4 shiftwidth=4 expandtab
 syntax enable
